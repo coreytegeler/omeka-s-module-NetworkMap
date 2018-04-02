@@ -1,0 +1,27 @@
+svg {
+  font-family: Abel,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+}
+.document > rect {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path {
+  fill: none;
+}
+.document, .node, .detail text, .all-documents {
+  cursor: pointer;
+}
+.all-documents {
+  fill: #aaa;
+}
+.detail a text:hover, text.all-documents:hover {
+  text-decoration: underline;
+}
+#graph-info {
+  position: absolute;
+  width: 140px;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 10px;
+}
