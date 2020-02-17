@@ -1,5 +1,13 @@
-<?php 
-echo '<div class="network-map-block">';
-	echo '<div id="network-map" data-json="' . $this->escapeHtml(json_encode($json)) . '"></div>';
+<?php
 echo '</div>';
+echo '</div>';
+echo '<div class="network-map-block">';
+	echo '<div id="network-map" class="network-map" data-json="' . $this->escapeHtml(json_encode($json)) . '">';
+		echo '<div class="go-back"></div>';
+		echo '<div class="doc-panels"><div class="close-panels"></div></div>';
+	echo '</div>';
+echo '</div>';
+echo '<div class="col col-4"></div>';
+echo '<div class="col col-8">';
+echo '<div class="column">';
 ?>

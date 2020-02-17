@@ -16,8 +16,7 @@ class Module extends AbstractModule
 
     public function getConfigForm(PhpRenderer $renderer)
     {
-        // return '<label>Mapbox</label><input type="text" name="mapbox" />';
-    		$services = $this->getServiceLocator();
+		$services = $this->getServiceLocator();
         $config = $services->get('Config');
         $settings = $services->get('Omeka\Settings');
         $formElementManager = $services->get('FormElementManager');

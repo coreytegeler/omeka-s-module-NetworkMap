@@ -48,7 +48,6 @@ class NetworkMap extends AbstractBlockLayout
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
         $view->headLink()->appendStylesheet($view->assetUrl('css/network-map-public.css', 'NetworkMap'));
-        $view->headScript()->appendFile($view->assetUrl('js/jquery-3.3.1.min.js', 'NetworkMap'), 'text/javascript');
         $view->headScript()->appendFile($view->assetUrl('js/d3.v3.min.js', 'NetworkMap'), 'text/javascript');
         $view->headScript()->appendFile($view->assetUrl('js/network-map-public.js', 'NetworkMap'), 'text/javascript');
 

@@ -1,27 +1,91 @@
-svg {
-  font-family: Abel,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 10px;
-}
-.document > rect {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-path {
-  fill: none;
-}
-.document, .node, .detail text, .all-documents {
-  cursor: pointer;
-}
-.all-documents {
-  fill: #aaa;
-}
-.detail a text:hover, text.all-documents:hover {
-  text-decoration: underline;
-}
+.network-map-block {
+  overflow: hidden;
+  margin-bottom: 100px;
+  position: relative; }
+  .network-map-block .go-back {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: 5px;
+    top: 5px; }
+    .network-map-block .go-back:hover {
+      cursor: pointer; }
+    .network-map-block .go-back::after {
+      content: "\f060";
+      font-family: "FontAwesome";
+      font-size: 1em;
+      position: absolute;
+      left: 0;
+      top: 0; }
+
+.doc-panels {
+  width: calc(100% - 30px);
+  max-height: 40%;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background: #f2f0df;
+  overflow-y: auto; }
+  .doc-panels .doc-panel {
+    border: 1px solid #0dae0b;
+    margin: 0;
+    display: none; }
+    .doc-panels .doc-panel .property {
+      padding-left: 15px;
+      padding-right: 15px; }
+      .doc-panels .doc-panel .property:first-of-type {
+        border-top: 0; }
+    .doc-panels .doc-panel.show {
+      display: block; }
+  .doc-panels .close-panels {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+    .doc-panels .close-panels:hover {
+      cursor: pointer; }
+    .doc-panels .close-panels::after {
+      content: "\f00d";
+      font-family: "FontAwesome";
+      font-size: 1em;
+      position: absolute;
+      left: 0;
+      top: 0; }
+
+.network-map {
+  display: block;
+  overflow: auto;
+  border: 1px solid #0dae0b; }
+  .network-map svg {
+    font-family: "Archivo Narrow", sans-serif;
+    overflow: visible; }
+    .network-map svg .document {
+      fill: transparent; }
+      .network-map svg .document > text {
+        stroke: none; }
+      .network-map svg .document > rect {
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 1.5px; }
+    .network-map svg path {
+      fill: none; }
+    .network-map svg .document, .network-map svg .node, .network-map svg .detail text, .network-map svg .all-documents {
+      cursor: pointer; }
+    .network-map svg .nodes .node circle {
+      fill: #f2f0df;
+      stroke: #0dae0b;
+      stroke-width: 2.5px; }
+    .network-map svg .nodes .node text.label {
+      fill: black; }
+    .network-map svg .all-documents {
+      fill: #aaa; }
+    .network-map svg .detail a text:hover, .network-map svg text.all-documents:hover {
+      text-decoration: underline; }
+
 #graph-info {
   position: absolute;
   width: 140px;
   right: 0;
   bottom: 0;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
