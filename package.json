@@ -19,7 +19,7 @@
   "homepage": "https://github.com/coreytegeler/omeka-s-module-NetworkMap#readme",
   "dependencies": {
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
+    "babel-loader": "^9.1.0",
     "babel-preset-es2015": "^6.22.0",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
